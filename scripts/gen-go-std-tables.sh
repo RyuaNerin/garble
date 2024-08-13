@@ -34,9 +34,6 @@ var runtimeAndDeps = map[string]bool{
 $(for path in ${runtime_and_deps}; do
 	echo "\"${path}\": true,"
 done)
-	// Not a runtime dependency, but still uses tricks allowed by import path.
-	// Not a big deal either way, given that it's only imported in test packages.
-	"runtime/internal/startlinetest": true,
 }
 
 var runtimeLinknamed = []string{
